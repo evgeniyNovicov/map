@@ -14,7 +14,7 @@ a{
     max-width: 1230px;
     padding: 0 15px;
     position: relative;
-    margin: 100px auto 0;
+    margin: 40px auto 0;
 }
 .map path{
     transition: .3s all;
