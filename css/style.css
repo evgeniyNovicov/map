@@ -71,6 +71,15 @@ a{
     text-transform: uppercase;
     color: #54C4EA;
 }
+.box-name__text--circle{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 9.77543px;
+    line-height: 100%;
+    letter-spacing: 1.22193px;
+    text-transform: uppercase;
+    color: #54C4EA;
+}
 .box-name__image{
     position: absolute;
     left: 13px;
