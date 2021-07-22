@@ -133,7 +133,7 @@ linkCircles.forEach(link => {
         statesArray = []
         const circle = e.currentTarget.querySelector('circle')
         const name = e.currentTarget.querySelector('path')
-        boxName.classList.remove('active')
+        boxNameCircle.classList.remove('active')
         circle.style.cssText = `fill: ${'white'}`
         name.style.cssText = `fill: ${'#001064'}`
     })
