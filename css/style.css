@@ -88,6 +88,12 @@ a{
     bottom: -8px;
 }
 
+.box-name__image--circle{
+    position: absolute;
+    left: 38px;
+    bottom: -8px;
+}
+
  /* svg path:hover { */
     /* transform: translate(-1px,-1px); */
     /* filter: url(#dropShadow); */
