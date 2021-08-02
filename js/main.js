@@ -127,7 +127,7 @@ linkCircles.forEach(link => {
         boxNameCircle.style.left = xFinish + 'px'
 
         boxNameCircle.classList.add('active')
-
+        
         circle.style.cssText = `fill: ${'#54C4EA'}`
         name.style.cssText = `fill: ${'white'}`
 
@@ -150,21 +150,31 @@ linkCircles.forEach(link => {
             })
             boxNameCircle.setAttribute('href', `${link.getAttribute('data-state')}`)
             boxNameCircle.classList.add('active')
+            boxNameCircle.addEventListener('click', (e) => {
+                e.preventDefault()
+                function hyphenate(str) {
+                    var replace = "-";
+                    str = str.toLowerCase().replace(/[\s_\b]/g, replace);
+                    console.log(str);
+                    return str;
+                  }
+                window.open('https://h2ecowaterbulk.webflow.io/states/' + hyphenate(boxNameCircle.innerText))
+            })
             let stateCirclelast = stateCircleLast.querySelector('circle')
             let stateCircleNameLast = stateCircleLast.querySelector('path[fill-opacity]')
             stateCirclelast.style.cssText = `fill: ${'#54C4EA'}`
             stateCircleNameLast.style.cssText = `fill: ${'white'}`
         })
-        boxNameCircle.addEventListener('click', (e) => {
-             e.preventDefault()
-             function hyphenate(str) {
-                var replace = "-";
-                str = str.toLowerCase().replace(/[\s_\b]/g, replace);
-                console.log(str);
-                return str;
-            }
-            window.open('https://h2ecowaterbulk.webflow.io/states/' + hyphenate(link.getAttribute('data-state')))
-        })
+//         boxNameCircle.addEventListener('click', (e) => {
+//              e.preventDefault()
+//              function hyphenate(str) {
+//                 var replace = "-";
+//                 str = str.toLowerCase().replace(/[\s_\b]/g, replace);
+//                 console.log(str);
+//                 return str;
+//             }
+//             window.open('https://h2ecowaterbulk.webflow.io/states/' + hyphenate(link.getAttribute('data-state')))
+//         })
         boxNameCircle.addEventListener('mouseleave', () => {
             statesArray = []
             link.removeAttribute('state')
