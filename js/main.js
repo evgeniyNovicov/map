@@ -14,8 +14,6 @@ let statesArray = []
 mapStates.forEach(state => {
     state.addEventListener('click', (e) => {
         e.preventDefault()
-        const statePath = state.querySelector('path[stroke-width]')
-        const stateName = state.querySelector('path[fill-opacity]')
        function hyphenate(str) {
             var replace = "-";
             str = str.toLowerCase().replace(/[\s_\b]/g, replace);
@@ -97,9 +95,13 @@ mapStates.forEach(state => {
 linkCircles.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault()
-        const statePath = link.querySelector('path[stroke-width]')
-        const stateName = link.querySelector('path[fill-opacity]')
-        window.open('https://h2ecowaterbulk.webflow.io/states/' + link.getAttribute('data-state'))
+       function hyphenate(str) {
+                var replace = "-";
+                str = str.toLowerCase().replace(/[\s_\b]/g, replace);
+                console.log(str);
+                return str;
+            }
+            window.open('https://h2ecowaterbulk.webflow.io/states/' + hyphenate(link.getAttribute('data-state')))
     })
     link.addEventListener('mouseenter', (e) => {
         statesArray = []
@@ -145,9 +147,13 @@ linkCircles.forEach(link => {
         })
         boxNameCircle.addEventListener('click', (e) => {
              e.preventDefault()
-             const statePath = link.querySelector('path[stroke-width]')
-             const stateName = link.querySelector('path[fill-opacity]')
-             window.open('https://h2ecowaterbulk.webflow.io/states/' + link.getAttribute('data-state'))
+             function hyphenate(str) {
+                var replace = "-";
+                str = str.toLowerCase().replace(/[\s_\b]/g, replace);
+                console.log(str);
+                return str;
+            }
+            window.open('https://h2ecowaterbulk.webflow.io/states/' + hyphenate(link.getAttribute('data-state')))
         })
         boxNameCircle.addEventListener('mouseleave', () => {
             statesArray = []
