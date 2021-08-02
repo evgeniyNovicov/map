@@ -60,6 +60,16 @@ mapStates.forEach(state => {
             })
             boxName.setAttribute('href', `${state.getAttribute('data-state')}`)
             boxName.classList.add('active')
+            boxName.addEventListener('click', (e) => {
+                e.preventDefault()
+                function hyphenate(str) {
+                    var replace = "-";
+                    str = str.toLowerCase().replace(/[\s_\b]/g, replace);
+                    console.log(str);
+                    return str;
+                  }
+                window.open('https://h2ecowaterbulk.webflow.io/states/' + hyphenate(boxName.innerText))
+            })
             let statePathlast = stateLast.querySelector('path[stroke-width]')
             let stateNameLast = stateLast.querySelector('path[fill-opacity]')
             if (statePathlast.getAttribute('fill')) {
@@ -69,16 +79,16 @@ mapStates.forEach(state => {
                 stateNameLast.style.cssText = `fill: ${'white'}`
             }
         }, true)
-        boxName.addEventListener('click', (e) => {
-             e.preventDefault()
-             function hyphenate(str) {
-                var replace = "-";
-                str = str.toLowerCase().replace(/[\s_\b]/g, replace);
-                console.log(str);
-                return str;
-            }
-            window.open('https://h2ecowaterbulk.webflow.io/states/' + hyphenate(state.getAttribute('data-state')))
-        })
+//         boxName.addEventListener('click', (e) => {
+//              e.preventDefault()
+//              function hyphenate(str) {
+//                 var replace = "-";
+//                 str = str.toLowerCase().replace(/[\s_\b]/g, replace);
+//                 console.log(str);
+//                 return str;
+//             }
+//             window.open('https://h2ecowaterbulk.webflow.io/states/' + hyphenate(state.getAttribute('data-state')))
+//         })
         boxName.addEventListener('mouseleave', () => {
             statesArray = []
             state.removeAttribute('state')
