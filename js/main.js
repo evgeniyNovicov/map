@@ -73,8 +73,6 @@ mapStates.forEach(state => {
         }, true)
         boxName.addEventListener('click', (e) => {
             e.preventDefault()
-            const statePath = state.querySelector('path[stroke-width]')
-            const stateName = state.querySelector('path[fill-opacity]')
             function hyphenate(str) {
                 var replace = "-";
                 str = str.toLowerCase().replace(/[\s_\b]/g, replace);
