@@ -85,6 +85,12 @@ mapStates.forEach(state => {
     })
 })
 linkCircles.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault()
+        const statePath = state.querySelector('path[stroke-width]')
+        const stateName = state.querySelector('path[fill-opacity]')
+        window.open('https://h2ecowaterbulk.webflow.io/states/' + state.getAttribute('data-state'))
+    })
     link.addEventListener('mouseenter', (e) => {
         statesArray = []
         const circle = e.currentTarget.querySelector('circle')
@@ -126,6 +132,12 @@ linkCircles.forEach(link => {
             let stateCircleNameLast = stateCircleLast.querySelector('path[fill-opacity]')
             stateCirclelast.style.cssText = `fill: ${'#54C4EA'}`
             stateCircleNameLast.style.cssText = `fill: ${'white'}`
+        })
+        boxNameCircle.addEventListener('click', (e) => {
+             e.preventDefault()
+             const statePath = state.querySelector('path[stroke-width]')
+             const stateName = state.querySelector('path[fill-opacity]')
+             window.open('https://h2ecowaterbulk.webflow.io/states/' + state.getAttribute('data-state'))
         })
         boxNameCircle.addEventListener('mouseleave', () => {
             statesArray = []
