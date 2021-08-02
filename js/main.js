@@ -65,6 +65,12 @@ mapStates.forEach(state => {
                 stateNameLast.style.cssText = `fill: ${'white'}`
             }
         }, true)
+        boxName.addEventListener('click', (e) => {
+            e.preventDefault()
+            const statePath = state.querySelector('path[stroke-width]')
+            const stateName = state.querySelector('path[fill-opacity]')
+            window.open('https://h2ecowaterbulk.webflow.io/states/' + state.getAttribute('data-state'))
+        })
         boxName.addEventListener('mouseleave', () => {
             statesArray = []
             state.removeAttribute('state')
