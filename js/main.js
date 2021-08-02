@@ -12,6 +12,12 @@ let topContainer = Math.round(containerPosition.top)
 let leftContainer = Math.round(containerPosition.left)
 let statesArray = []
 mapStates.forEach(state => {
+    state.addEventListener('click', (e) => {
+        e.preventDefault()
+        const statePath = state.querySelector('path[stroke-width]')
+        const stateName = state.querySelector('path[fill-opacity]')
+        window.open('https://h2ecowaterbulk.webflow.io/states/' + state.getAttribute('data-state'))
+    })
     state.addEventListener('mouseenter', (e) => {
         const statePath = state.querySelector('path[stroke-width]')
         const stateName = state.querySelector('path[fill-opacity]')
