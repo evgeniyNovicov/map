@@ -70,8 +70,8 @@ mapStates.forEach(state => {
             }
         }, true)
         boxName.addEventListener('click', (e) => {
-            e.preventDefault()
-            function hyphenate(str) {
+             e.preventDefault()
+             function hyphenate(str) {
                 var replace = "-";
                 str = str.toLowerCase().replace(/[\s_\b]/g, replace);
                 console.log(str);
