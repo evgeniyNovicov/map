@@ -111,7 +111,7 @@ linkCircles.forEach(link => {
                 console.log(str);
                 return str;
             }
-            window.open('https://h2ecowaterbulk.webflow.io/states/' + hyphenate(link.getAttribute('data-state')))
+            window.open(url.protocol + url.hostname + '/' + hyphenate(link.getAttribute('data-state')))
     })
     link.addEventListener('mouseenter', (e) => {
         statesArray = []
