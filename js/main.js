@@ -20,7 +20,7 @@ mapStates.forEach(state => {
             console.log(str);
             return str;
           }
-        window.open('https://h2ecowaterbulk.webflow.io/states/' + hyphenate(state.getAttribute('data-state')))
+        window.open('https://www.h2ecowater.com//states/' + hyphenate(state.getAttribute('data-state')))
     })
     state.addEventListener('mouseenter', (e) => {
         const statePath = state.querySelector('path[stroke-width]')
@@ -68,7 +68,7 @@ mapStates.forEach(state => {
                     console.log(str);
                     return str;
                   }
-                window.open('https://h2ecowaterbulk.webflow.io/states/' + hyphenate(boxName.innerText))
+                window.open('https://www.h2ecowater.com/states/' + hyphenate(boxName.innerText))
             })
             let statePathlast = stateLast.querySelector('path[stroke-width]')
             let stateNameLast = stateLast.querySelector('path[fill-opacity]')
@@ -101,7 +101,7 @@ linkCircles.forEach(link => {
                 console.log(str);
                 return str;
             }
-            window.open('https://h2ecowaterbulk.webflow.io/states/' + hyphenate(link.getAttribute('data-state')))
+            window.open('https://www.h2ecowater.com/states/' + hyphenate(link.getAttribute('data-state')))
     })
     link.addEventListener('mouseenter', (e) => {
         statesArray = []
@@ -148,7 +148,7 @@ linkCircles.forEach(link => {
                     console.log(str);
                     return str;
                   }
-                window.open('https://h2ecowaterbulk.webflow.io/states/' + hyphenate(boxNameCircle.innerText))
+                window.open('https://www.h2ecowater.com/states/' + hyphenate(boxNameCircle.innerText))
             })
             let stateCirclelast = stateCircleLast.querySelector('circle')
             let stateCircleNameLast = stateCircleLast.querySelector('path[fill-opacity]')
