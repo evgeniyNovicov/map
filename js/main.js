@@ -20,7 +20,7 @@ mapStates.forEach(state => {
             console.log(str);
             return str;
           }
-        window.open('https://www.h2ecowater.com//states/' + hyphenate(state.getAttribute('data-state')))
+        window.open('https://www.h2ecowater.com/states/' + hyphenate(state.getAttribute('data-state')))
     })
     state.addEventListener('mouseenter', (e) => {
         const statePath = state.querySelector('path[stroke-width]')
